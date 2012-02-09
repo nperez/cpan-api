@@ -24,10 +24,10 @@ sub get : Chained('index') : PathPart('') : Args(1) {
                                     {   "term" => { "module.name" => $module }
                                     },
                                     {   "term" =>
-                                            { "module.indexed" => 'true' }
+                                            { "module.indexed" => \1 }
                                     },
                                     {   "term" =>
-                                            { "module.authorized" => 'true' }
+                                            { "module.authorized" => \1 }
                                     }
                                 ]
                             }
